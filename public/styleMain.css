@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css?family=Vollkorn&display=swap");
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  font-family: "Vollkorn", serif;
+  font-weight: 500;
+  background-image: url("kenrick-mills-MF9Wy1NA55I-unsplash.jpg");
+  background-size: cover;
+  background-position: center center;
+}
+
+section {
+  /* background-color: rgba(245, 245, 220, 0.075);  for testing purposes*/
+  /* height: 100%; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 800px;
+  margin: auto;
+  position: relative;
+  /* play around with the max width */
+}
+
+.title {
+  /* background-color: rgba(0, 0, 0, 0.014); for testing purposes */
+  color: aliceblue;
+  text-align: center;
+  font-size: 160px;
+  width: 1000px;
+  height: 200px;
+  margin-top: 150px;
+  /* background-size: 100%; */
+  /* opacity: 100; */
+  animation: slideUp 1s cubic-bezier(0.19, 1, 0.3, 1) 0.2s forwards;
+}
+
+.subtitle {
+  /* margin-top: 50%; */
+  /* color: #bdb3cb; */
+  /* background-color: rgba(165, 42, 42, 0.027);  for testing purposes*/
+  color: aliceblue;
+  font-size: 50px;
+  text-align: center;
+  width: 1000px;
+  letter-spacing: 0.5;
+  opacity: 0;
+  animation: slideUp 1s cubic-bezier(0.19, 1, 0.3, 1) 1s forwards;
+}
+
+a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+p {
+  margin: 0.83rem 0;
+}
+
+.buttonrow {
+  /* background-color: rgba(43, 171, 226, 0.055); for testing purposes */
+  display: block;
+}
+
+.signUpButton {
+  padding: 20px 40px 17px 40px;
+  margin-top: 60px;
+  float: left;
+  margin-right: 75px;
+  background-color: rgb(90, 127, 136);
+  /* this is for animation switch color */
+  /* background-color: rgb(253, 183, 172); */
+  font-family: "Vollkorn", serif;
+  font-size: 24px;
+  border: 0px;
+  border-radius: 35px;
+  color: aliceblue;
+}
+
+.logInButton {
+  padding: 20px 40px 17px 40px;
+  margin-top: 60px;
+  float: right;
+  margin-left: 75px;
+  background-color: rgb(90, 127, 136);
+  /* this is for animation switch color */
+  /* background-color: rgb(253, 183, 172); */
+  font-family: "Vollkorn", serif;
+  font-size: 24px;
+  border: 0px;
+  border-radius: 35px;
+  color: aliceblue;
+}
+
+.journalButton {
+  padding: 20px 40px 17px 40px;
+  margin-top: 60px;
+  float: left;
+  margin-right: 75px;
+  background-color: rgb(90, 127, 136);
+  /* this is for animation switch color */
+  /* background-color: rgb(253, 183, 172); */
+  font-family: "Vollkorn", serif;
+  font-size: 24px;
+  border: 0px;
+  border-radius: 35px;
+  color: aliceblue;
+}
+
+.reflectionButton {
+  padding: 20px 40px 17px 40px;
+  margin-top: 60px;
+  float: right;
+  margin-left: 75px;
+  background-color: rgb(90, 127, 136);
+  /* this is for animation switch color */
+  /* background-color: rgb(253, 183, 172); */
+  font-family: "Vollkorn", serif;
+  font-size: 24px;
+  border: 0px;
+  border-radius: 35px;
+  color: aliceblue;
+}
+
+button:hover {
+  background-color: rgb(253, 183, 172);
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.2%;
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
