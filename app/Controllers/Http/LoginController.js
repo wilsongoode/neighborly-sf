@@ -1,4 +1,4 @@
-'use strict'
+"use strict";
 
 /** @typedef {import('@adonisjs/framework/src/Request')} Request */
 /** @typedef {import('@adonisjs/framework/src/Response')} Response */
@@ -17,8 +17,7 @@ class LoginController {
    * @param {Response} ctx.response
    * @param {View} ctx.view
    */
-  async index ({ request, response, view }) {
-  }
+  async index({ request, response, view }) {}
 
   /**
    * Render a form to be used for creating a new login.
@@ -29,8 +28,8 @@ class LoginController {
    * @param {Response} ctx.response
    * @param {View} ctx.view
    */
-  async create ({ request, response, view }) {
-    return view.render('login')
+  async create({ request, response, view }) {
+    return view.render("login");
   }
 
   /**
@@ -41,11 +40,11 @@ class LoginController {
    * @param {Request} ctx.request
    * @param {Response} ctx.response
    */
-  async store ({ request, auth, session, response }) {
-    await auth.attempt(request.input('email'), request.input('password'))
+  async store({ request, auth, session, response }) {
+    await auth.attempt(request.input("email"), request.input("password"));
 
-    session.flash({ successMessage: 'You have logged in successfully!' })
-    return response.redirect('/index')
+    session.flash({ successMessage: "You have logged in successfully!" });
+    return response.redirect("/index");
   }
 
   /**
@@ -57,8 +56,7 @@ class LoginController {
    * @param {Response} ctx.response
    * @param {View} ctx.view
    */
-  async show ({ params, request, response, view }) {
-  }
+  async show({ params, request, response, view }) {}
 
   /**
    * Render a form to update an existing login.
@@ -69,8 +67,7 @@ class LoginController {
    * @param {Response} ctx.response
    * @param {View} ctx.view
    */
-  async edit ({ params, request, response, view }) {
-  }
+  async edit({ params, request, response, view }) {}
 
   /**
    * Update login details.
@@ -80,8 +77,7 @@ class LoginController {
    * @param {Request} ctx.request
    * @param {Response} ctx.response
    */
-  async update ({ params, request, response }) {
-  }
+  async update({ params, request, response }) {}
 
   /**
    * Delete a login with id.
@@ -91,11 +87,11 @@ class LoginController {
    * @param {Request} ctx.request
    * @param {Response} ctx.response
    */
-  async destroy ({ params, auth, request, response }) {
-    await auth.logout()
+  async destroy({ params, auth, request, response }) {
+    await auth.logout();
 
-    return response.route('login.store')
+    return response.route("login.store");
   }
 }
 
-module.exports = LoginController
+module.exports = LoginController;
