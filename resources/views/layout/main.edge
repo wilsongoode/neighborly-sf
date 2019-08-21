@@ -1,23 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-     {{ style('https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.css')}}
-     {{ style('styleMain') }}
-
-    @!section('extrascripts')
-
-    <title>
-        @!section('title')
-        {{--  need to declare a title on every page we create. title will be the thing that shows up in the tab  --}}
-    </title>
+  <meta charset="UTF-8" />
+  <title>
+  @section('title')
+    Adonis Todo App
+  @endsection
+  </title>
+  {{ style('https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css') }}
+  {{ style('app') }}
 </head>
 <body>
-    @!section('content') 
-    
-    {{script ('https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.js')}}
-    {{script ('https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js')}}
+  @!section('content')
 </body>
 </html>

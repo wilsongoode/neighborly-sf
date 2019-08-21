@@ -36,13 +36,13 @@ Route.on("/").render("index");
 
 Route.on("/welcome").render("welcome");
 
-// login page
-Route.on("/login").render("auth.login");
-Route.post("/login", "UserController.login").validator("LoginUser");
+Route.group(() => {
+  Route.get('/register', 'RegisterController.create').as('register.create')
+  Route.post('/register', 'RegisterController.store').as('register.store').validator('Register')
 
-//sign up
-Route.on("/signup").render("auth.signup");
-Route.post("/signup", "UserController.create").validator("CreateUser");
+  Route.get('/login', 'LoginController.create').as('login.create')
+  Route.post('/login', 'LoginController.store').as('login.store')
+}).middleware(['guest'])
 
 //logout
 Route.get("/logout", async ({ auth, response }) => {
