@@ -29,10 +29,14 @@
     "@adonisjs/shield": "^1.0.8",
     "@adonisjs/validator": "^5.0.6",
     "mysql": "^2.17.1",
-    "sqlite3": "^4.1.0"
+    "sqlite3": "^4.1.0",
+    "url-parse": "^1.4.7"
   },
   "devDependencies": {},
   "autoload": {
     "App": "./app"
+  },
+  "engines": {
+    "node": "12.6.0"
   }
 }
