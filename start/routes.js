@@ -1,4 +1,4 @@
-'use strict'
+"use strict";
 
 /*
 |--------------------------------------------------------------------------
@@ -30,6 +30,19 @@
 
 /** @type {typeof import('@adonisjs/framework/src/Route/Manager')} */
 const Route = use("Route");
+const Database = use("Database");
+
+Route.on("/welcome").render("welcome");
+
+Route.get("/query", "OrganizationController.query");
+// Route.get("/query", async () => {
+
+//   //return await Database.raw('select * from images order by rand() limit 1')
+//   const result = await Database.select("*")
+//     .from("organizations")
+
+//   return result;
+// });
 
 // landing page
 Route.on("/").render("index");
