@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>List</title>
+  {{ style('style') }}
+</head>
+<div class="ui cards">
+@each(org in orgs)
+
+<div class="card">
+    <div class="content">
+        <div class="header">{{ org.Name }}</div>
+        <div class="meta">2 days ago</div>
+        <div class="description">
+            <p>{{ org.About }}</p>
+            <p>Many people also have their own barometers for what makes a cute dog.</p>
+        </div>
+    </div>
+    <div class="extra content">
+        <i class="check icon"></i>
+        121 Votes
+    </div>
+</div>
+
+@endeach
+</div>

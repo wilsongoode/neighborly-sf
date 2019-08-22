@@ -8,9 +8,10 @@ class OrganizationsSchema extends Schema {
     this.create("organizations", table => {
       table.increments();
       table.string("name");
-      table.string("homepage_url");
-      table.string("donate_url");
       table.text("about");
+      table.string("homepage_url");
+      table.string("email");
+      table.string("phone")
       table.string("address");
       table.json("categories");
       table.json("balance");
