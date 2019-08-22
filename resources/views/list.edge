@@ -123,10 +123,8 @@
             </div>
 
             <ul class="list-unstyled components">
-                <p>Charities</p>
+                <p>Filter by nonprofits that support:</p>
                 <li class="active">
-            </ul>
-
             </ul>
             <form name="search_something" action=/query method="get">
                 <label class="custom-control custom-checkbox">
@@ -226,12 +224,11 @@
             @each(org in orgs)
             <div class="card">
                 <div class="card-body">
-                    <h5 class="card-title">{{ org.name }}</h5>
+                    <h5 class="card-title">{{ org.name }} <span class="card-balance">Balance: ${{ org.balance }}</span></h5>
                     <h6 class="card-subtitle mb-2 text-muted">{{ org.address }}</h6>
                     <p class="card-text">{{ org.about }}</p>
                     <a href="{{ org.homepage_url }}" class="card-link">Website</a>
                     <a href="mailto:{{ org.email }}" class="card-link">Email</a>
-                    <a class="card-link">Balance: {{ org.balance }}</a>
                 </div>
             </div>
             <div class="line"></div>
@@ -258,9 +255,9 @@
                 $('#sidebar').toggleClass('active');
                 $(this).toggleClass('active');
             });
-            if({{{ outputString }}}){
-                $('#successModal').on('show.bs.modal')
-            }
+            // if({{{ outputString }}}){
+            //     $('#successModal').on('show.bs.modal')
+            // }
         });
         $('#exampleModal').on('show.bs.modal', function (event) {
         var button = $(event.relatedTarget) // Button that triggered the modal

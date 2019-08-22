@@ -4,9 +4,9 @@
 const Model = use('Model')
 
 class Organization extends Model {
-    static get table () {
-        return 'organizations'
-      }
+    // static get table () {
+    //     return 'organizations'
+    //   }
 }
 
 module.exports = Organization

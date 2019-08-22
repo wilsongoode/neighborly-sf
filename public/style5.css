@@ -78,8 +78,8 @@ label.custom-control.custom-checkbox {
 #sidebar {
   min-width: 250px;
   max-width: 250px;
-  background: #7386d5;
-  color: #fff;
+  background: #f8f9fa;
+  color: #64a19d;
   transition: all 0.6s cubic-bezier(0.945, 0.02, 0.27, 0.665);
   transform-origin: bottom left;
 }
@@ -100,7 +100,7 @@ label.custom-control.custom-checkbox {
 }
 
 #sidebar ul p {
-  color: #fff;
+  color: #64a19d;
   padding: 10px;
 }
 
@@ -202,6 +202,14 @@ a.article:hover {
   transform: none;
   opacity: 1;
   margin: 5px auto;
+}
+
+/* h5.card-title {
+    justify-content: space-between;
+} */
+.card-balance {
+  float: right;
+  color: #64a19d;
 }
 
 /* ---------------------------------------------------
