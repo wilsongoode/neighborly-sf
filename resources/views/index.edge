@@ -1,0 +1,21 @@
+@layout('layout.main')
+
+@section('title')
+  Neighborly
+  {{--  showing up in the tab  --}}
+@endsection
+
+@section('content')
+
+<section>
+<div class="title" href="/"> Neighborly </div>
+<div class="subtitle">
+  <p>Being a good Neighbor</p>
+</div>
+<div class="buttonrow">
+  <a href="/register"><button class="signUpButton"> don't have an account? </button></a>
+  <a href="/login"><button class="logInButton"> have an account? </button></a>
+</div>
+</section>
+
+@endsection
