@@ -1,31 +1,14 @@
-# Adonis fullstack application
+# Panhandle
 
-This is the fullstack boilerplate for AdonisJs, it comes pre-configured with.
+This is a project to address distribution of charitable donations to organizations that are capable of supporting persons experiencing homelessness.
 
-1. Bodyparser
-2. Session
-3. Authentication
-4. Web security middleware
-5. CORS
-6. Edge template engine
-7. Lucid ORM
-8. Migrations and seeds
+## Running this app
 
-## Setup
-
-Use the adonis command to install the blueprint
+In order to run this app, clone or download the repo, then:
 
 ```bash
-adonis new yardstick
+npm install
 ```
 
-or manually clone the repo and then run `npm install`.
-
-
-### Migrations
-
-Run the following command to run startup migrations.
-
-```js
-adonis migration:run
-```
+To serve the app, you will need a .env file configuring the app for use on your system. Crucial pieces of this are the database connection, the server address. There are likely other ENV errors.
+Hosting on Heroku, etc. should avoid this, as long as you configure the Heroku ENV appropriately with a database.
