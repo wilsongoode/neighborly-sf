@@ -9,8 +9,9 @@ class OrganizationController {
     prefs = Object.keys(prefs); // converts to array of keys
     Logger.info("request query is %s", prefs);
     const orgs = await Database.select("*").from("organizations");
-    let donor_options = this._filterOrgs(orgs, prefs);
-    // Logger.info(donor_options);
+    const donor_options = this._filterOrgs(orgs, prefs);
+    // Logger.info(donor_options[0]);
+    // console.log(donor_options[0]);
     Logger.info("query found %d matching orgs", donor_options.length)
     return view.render("list",{ orgs: donor_options });
   }
@@ -29,6 +30,9 @@ class OrganizationController {
       return false;
     });
     return donor_options;
+  }
+  async donate({ request, response, view }){
+
   }
 }
 
