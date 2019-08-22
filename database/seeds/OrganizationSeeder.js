@@ -40,12 +40,19 @@ class OrganizationSeeder {
             filtered_categories.push(key);
           }
         });
+        // fixes missing http
+        let site =
+          data[i].Website.startsWith("http://") ||
+          data[i].Website.startsWith("https://")
+            ? data[i].Website
+            : "https://" + data[i].Website;
+        console.log(site);
         // console.log(`${data[i].Name} has the following categories:`);
         // console.log(filtered_categories);
         const record = await Database.table("organizations").insert({
           name: data[i].Name,
           about: data[i].About,
-          homepage_url: data[i].Website,
+          homepage_url: site,
           email: data[i].Email,
           phone: data[i].Phone,
           address: data[i].Address,
