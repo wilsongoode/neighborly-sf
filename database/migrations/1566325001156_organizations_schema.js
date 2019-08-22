@@ -15,7 +15,7 @@ class OrganizationsSchema extends Schema {
       table.string("address");
       table.json("categories");
       table.string("balance");
-      table.timestamps();
+      // table.timestamps();
     });
   }
 

@@ -57,9 +57,9 @@ class OrganizationSeeder {
           phone: data[i].Phone,
           address: data[i].Address,
           categories: JSON.stringify(filtered_categories),
-          balance: 0,
-          created_at: Database.fn.now(),
-          updated_at: Database.fn.now()
+          balance: 0
+          // created_at: Database.fn.now(),
+          // updated_at: Database.fn.now()
         });
       }
     } catch (err) {
