@@ -25,6 +25,7 @@ class OrganizationController {
     Logger.info(prefs);
     console.log(prefs);
     let donation = currency(prefs.donation_amount);
+    let choice = prefs.choice;
     prefs = Object.keys(prefs); // converts to array of keys
     console.log(donation);
     let donor_prefs = ["food"];
@@ -39,7 +40,7 @@ class OrganizationController {
     // console.log(donor_options);
     console.log("distributing your donation");
     
-    let choice = "equally"; // "randomly" or "equally"
+    //let choice = "equally"; // "randomly" or "equally"
     if (choice === "randomly") {
       this._distributeRandomly(donor_options, donation);
     } else {
@@ -54,7 +55,7 @@ class OrganizationController {
       console.log(`"${org.name}" now has $${org.balance}`);
       // currency is automatically formatted when used in string interpolation
     }
-    return view.render("success", { orgs: donor_options, outputString});
+    return view.render("list", { orgs: donor_options, outputString});
   }
 
 
@@ -86,7 +87,7 @@ class OrganizationController {
     }
     while (remaining_donation.intValue > 0) {
       // divide donation into each org in $0.50 increments
-      let who = getRandomInt(0, dist_array.length - 1);
+      let who = this._getRandomInt(0, dist_array.length - 1);
       // console.log(`org: ${who}`);
       // console.log(`remain: ${remaining_donation.value}`);
 
@@ -103,7 +104,7 @@ class OrganizationController {
     console.log(dist_array.map(x => x.value));
     // add balance to recipients
     for (let i = 0; i < recipients.length; i++) {
-      recipients[i].balance = recipients[i].balance.add(dist_array[i].value);
+      recipients[i].balance = currency(recipients[i].balance).add(dist_array[i].value).value;
     }
     return;
   }
@@ -124,6 +125,10 @@ class OrganizationController {
       recipients[i].balance = currency(recipients[i].balance).add(dist_array[i].value).value;
     }
     return;
+  }
+
+  _getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) + min);
   }
 }
 

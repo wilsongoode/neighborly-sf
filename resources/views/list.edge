@@ -50,7 +50,7 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Select the areas you would like to donate to</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -61,6 +61,11 @@
                             <label for="donation_amount" class="col-form-label">Donation amount:</label>
                             <input type="text" name="donation_amount" class="form-control" id="donation_amount">
                         </div>
+                        <label for="sel1">I would like to donate...</label>
+                        <select name="choice" class="form-control" id="sel1">
+                            <option>equally</option>
+                            <option>randomly</option>
+                        </select>
                         <label class="custom-control custom-checkbox">
                             <input type="checkbox" name="Food" class="custom-control-input">
                             <span class="custom-control-indicator"></span>
@@ -120,8 +125,8 @@
             <ul class="list-unstyled components">
                 <p>Charities</p>
                 <li class="active">
-                    </ul>
-                
+            </ul>
+
             </ul>
             <form name="search_something" action=/query method="get">
                 <label class="custom-control custom-checkbox">
@@ -171,10 +176,10 @@
                 <li>
 
                     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"
-                        data-whatever="@mdo">Open modal for @mdo</button>
+                        data-whatever="@mdo">Donate now!</button>
                 </li>
                 <li>
-                  
+
                     <a href="/" class="article">Back to Neighborly</a>
 
                 </li>
@@ -202,16 +207,16 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="nav navbar-nav ml-auto">
                             <li class="nav-item active">
-                                
+
                             </li>
                             <li class="nav-item">
-                               
+
                             </li>
                             <li class="nav-item">
-                               
+
                             </li>
                             <li class="nav-item">
-                               
+
                             </li>
                         </ul>
                     </div>
@@ -226,6 +231,7 @@
                     <p class="card-text">{{ org.about }}</p>
                     <a href="{{ org.homepage_url }}" class="card-link">Website</a>
                     <a href="mailto:{{ org.email }}" class="card-link">Email</a>
+                    <a class="card-link">Balance: {{ org.balance }}</a>
                 </div>
             </div>
             <div class="line"></div>
@@ -253,7 +259,7 @@
                 $(this).toggleClass('active');
             });
             if({{{ outputString }}}){
-                $('#successModal').show()
+                $('#successModal').on('show.bs.modal')
             }
         });
         $('#exampleModal').on('show.bs.modal', function (event) {
