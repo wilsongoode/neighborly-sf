@@ -21,7 +21,7 @@ Create Account
               <div class="form-group row">
                 <label for="username" class="col-md-4 col-form-label text-md-right">Username</label>
                 <div class="col-md-6">
-                  <input id="username" type="text" name="username" class="form-control">
+                  <input id="username" type="text" name="username" value="{{ old('username') }}" class="form-control">
                   @if(hasErrorFor('username'))
                   <div class="alert alert-danger mb-2 mt-2">{{ getErrorFor('username') }}</div>
                   @endif
