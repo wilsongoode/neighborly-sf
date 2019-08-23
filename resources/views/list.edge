@@ -196,28 +196,7 @@
                         <span></span>
                         <span></span>
                     </button>
-                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse"
-                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                        <i class="fas fa-align-justify"></i>
-                    </button>
-
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="nav navbar-nav ml-auto">
-                            <li class="nav-item active">
-
-                            </li>
-                            <li class="nav-item">
-
-                            </li>
-                            <li class="nav-item">
-
-                            </li>
-                            <li class="nav-item">
-
-                            </li>
-                        </ul>
-                    </div>
+                    
                 </div>
             </nav>
             <!-- Organizations from database query -->
@@ -255,18 +234,9 @@
                 $('#sidebar').toggleClass('active');
                 $(this).toggleClass('active');
             });
-            // if({{{ outputString }}}){
-            //     $('#successModal').on('show.bs.modal')
-            // }
         });
         $('#exampleModal').on('show.bs.modal', function (event) {
         var button = $(event.relatedTarget) // Button that triggered the modal
-        // var recipient = button.data('whatever') // Extract info from data-* attributes
-        // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
-        // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
-        var modal = $(this)
-        modal.find('.modal-title').text('New donation)
-        // modal.find('.modal-body input').val(recipient)
         })
     </script>
 </body>
