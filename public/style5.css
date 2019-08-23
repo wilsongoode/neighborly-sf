@@ -54,7 +54,7 @@ label.custom-control.custom-checkbox {
 
 #submitFilters {
   background: #fff;
-  color: #7386d5;
+  color: #f8f9fa;
 }
 
 .line {
@@ -91,7 +91,11 @@ label.custom-control.custom-checkbox {
 
 #sidebar .sidebar-header {
   padding: 20px;
-  background: #6d7fcc;
+  background: #64a19d;
+}
+
+div.sidebar-header {
+  color: #f8f9fa;
 }
 
 #sidebar ul.components {
@@ -110,14 +114,14 @@ label.custom-control.custom-checkbox {
   display: block;
 }
 #sidebar ul li a:hover {
-  color: #7386d5;
+  color: #64a19d;
   background: #fff;
 }
 
 #sidebar ul li.active > a,
 a[aria-expanded="true"] {
   color: #fff;
-  background: #6d7fcc;
+  background: #64a19d;
 }
 
 a[data-toggle="collapse"] {
@@ -135,11 +139,12 @@ a[data-toggle="collapse"] {
 ul ul a {
   font-size: 0.9em !important;
   padding-left: 30px !important;
-  background: #6d7fcc;
+  background: #64a19d;
 }
 
 ul.CTAs {
-  padding: 20px;
+  float: right;
+  padding: -20px;
 }
 
 ul.CTAs a {
@@ -152,15 +157,25 @@ ul.CTAs a {
 
 a.download {
   background: #fff;
-  color: #7386d5;
+  color: #64a19d;
 }
 
 a.article,
 a.article:hover {
-  background: #6d7fcc !important;
+  background: #64a19d !important;
   color: #fff !important;
 }
 
+.btn.btn-primary {
+  background: #64a19d !important;
+}
+
+.fa-arrow-left {
+  margin-top: 5px;
+  float: right;
+}
+
+/* #submitt color: #f8f9fa; */
 /* ---------------------------------------------------
     CONTENT STYLE
 ----------------------------------------------------- */
@@ -204,14 +219,34 @@ a.article:hover {
   margin: 5px auto;
 }
 
-/* h5.card-title {
-    justify-content: space-between;
-} */
+#pre-donate {
+  background: #64a19d;
+}
+
 .card-balance {
   float: right;
   color: #64a19d;
 }
 
+#myBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: #64a19d; /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
+}
+
+#myBtn:hover {
+  background-color: #555; /* Add a dark-grey background on hover */
+}
 /* ---------------------------------------------------
     MEDIAQUERIES
 ----------------------------------------------------- */
