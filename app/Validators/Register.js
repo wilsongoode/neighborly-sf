@@ -12,8 +12,8 @@ class Register {
   get messages () {
     return {
       'username.required': 'The username field is required',
-      'username.min': 'The password field must be at least 5 characters',
-      'username.unique': 'User name already exists',
+      'username.min': 'The username field must be at least 5 characters',
+      'username.unique': 'That username already exists',
       'email.required': 'The email field is required',
       'email.email': 'Enter a valid email address',
       'email.unique': 'Email already exists',
