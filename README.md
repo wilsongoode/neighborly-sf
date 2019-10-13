@@ -1,4 +1,4 @@
-# Panhandle
+# Neighborly
 
 This is a project to address distribution of charitable donations to organizations that are capable of supporting persons experiencing homelessness.
 
